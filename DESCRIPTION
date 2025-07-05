@@ -2,11 +2,11 @@ Package: cleanandezplot
 Type: Package
 Title: Quick Data Cleaning and Visualization Tools
 Version: 0.1.0
-Authors@R: 
-    person("Yuhao", "Sun", , "Yuhao.Sun@campus.lmu.de", role = c("aut", "cre"))
+Authors@R: Yuhao Sun
 Maintainer: Yuhao.Sun@campus.lmu.de
-Description: rovides simple functions for cleaning missing data and creating quick ggplot2 visualizations
-    such as histograms, scatter plots, and bar charts.
+Description: rovides simple functions for cleaning missing data and creating 
+             quick ggplot2 visualizations such as histograms, scatter plots, and
+             bar charts.
 License: MIT
 Encoding: UTF-8
 LazyData: true

@@ -1,7 +1,5 @@
 #' Quickly generate common ggplot2 plots
 #'
-#' A simplified wrapper for common plots: histogram, line, bar, scatter, with axis labels and title support.
-#'
 #' @param data A data frame.
 #' @param x Name of x-axis variable (character).
 #' @param y Name of y-axis variable (character). Not needed for histograms or count-based bar plots.
@@ -14,10 +12,12 @@
 #' @return A ggplot2 plot object.
 #' @examples
 #' quick_plot(mtcars, x = "mpg", type = "hist", xlab = "MPG", title = "Histogram of MPG")
-#' quick_plot(mtcars, x = "hp", y = "mpg", type = "scatter", xlab = "Horsepower", ylab = "Miles per Gallon")
+#' quick_plot(mtcars, x = "hp", y = "mpg", type = "scatter", xlab = "Horsepower", ylab = "Miles per Gallon", title = "Horsepower vs Miles per Gallon")
+#' quick_plot(mtcars, x = "hp", y = "mpg", type = "line")
+#'quick_plot(mtcars, x = "gear", y = "mpg", type = "bar")
 #'
 #' @export
-quick_plot <- function(data, x, y = NULL, type = "hist", bins = 30, xlab = NULL, ylab = NULL, title = NULL) {
+quick_plot <- function(data, x, y = NULL, type, bins = 30, xlab = NULL, ylab = NULL, title = NULL) {
   if (!requireNamespace("ggplot2", quietly = TRUE)) {
     stop("The 'ggplot2' package is required.")
   }
@@ -27,7 +27,6 @@ quick_plot <- function(data, x, y = NULL, type = "hist", bins = 30, xlab = NULL,
   if (!x %in% names(data)) stop("x variable not found in data")
   if (!is.null(y) && !y %in% names(data)) stop("y variable not found in data")
 
-  # Set default axis labels if not provided
   xlab <- if (is.null(xlab)) x else xlab
   ylab <- if (is.null(ylab)) (if (!is.null(y)) y else "Count") else ylab
 

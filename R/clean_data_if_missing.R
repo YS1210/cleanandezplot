@@ -1,8 +1,5 @@
 #' #' Check and clean missing values in a data frame
 #'
-#' Automatically checks for missing values. If found, either removes rows or fills values depending on the method.
-#' If no missing values are found, returns the original data with a message.
-#'
 #' @param data A data frame.
 #' @param method How to handle missing values: "remove" (default) or "fill".
 #' @param fill_value A numeric value used to fill missing numeric values (only used if method = "fill").
