@@ -1,7 +1,7 @@
 ---
-title: "Exercise #X"
+title: "Exercise #6"
 subtitle: "Fortgeschrittene Statistische Software für NF"
-author: "Name (Martrikelnummer), Name (Martrikelnummer), ..."
+author: "Yuhao Sun (12530170)"
 date: "`r Sys.Date()`"
 output: distill::distill_article
 ---
@@ -75,17 +75,19 @@ a)  Briefly describe in one - two sentences what your R package does and
     why you decided to choose this functionality. This is just intended
     to give us some context to better understand the package.
 
+    
+
 b)  To make installation easier, your R package should be in a public
     repository on GitHub. Provide the URL to the GitHub repository
     below:
 
-e.g. `https://github.com/<YOUR_GH_USERNAME>/<PACKAGE_REPOSITORY_NAME>`
+    `https://github.com/YS1210/cleanandezplot`
 
 c)  Your R package should be installable via
     `remotes::install_github()`. Before submitting your solution to this
     exercise sheet please test whether you can install your R package
     from GitHub. Provide the command below:
 
-``` r
-remotes::install_github("<YOUR_GH_USERNAME>/<PACKAGE_REPOSITORY_NAME>")
-```
+   ``` r
+   remotes::install_github("<YOUR_GH_USERNAME>/<PACKAGE_REPOSITORY_NAME>")
+   ```
