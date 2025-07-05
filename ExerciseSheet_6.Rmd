@@ -75,7 +75,7 @@ a)  Briefly describe in one - two sentences what your R package does and
     why you decided to choose this functionality. This is just intended
     to give us some context to better understand the package.
 
-    
+  > Our R package cleanandezplot provides simple tools to automatically clean        missing  values and quickly generate commonly used plots such as                 histograms, scatter plots, and bar charts. 
 
 b)  To make installation easier, your R package should be in a public
     repository on GitHub. Provide the URL to the GitHub repository
@@ -88,6 +88,7 @@ c)  Your R package should be installable via
     exercise sheet please test whether you can install your R package
     from GitHub. Provide the command below:
 
-   ``` r
-   remotes::install_github("<YOUR_GH_USERNAME>/<PACKAGE_REPOSITORY_NAME>")
-   ```
+```{r}
+Sys.setenv(LANG = "en")
+remotes::install_github("YS1210/cleanandezplot")
+```
